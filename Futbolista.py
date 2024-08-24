@@ -1,4 +1,7 @@
-class Futbolista:
+import Persona
+import Deportista
+
+class Futbolista(Persona, Deportista):
     #Atributo de clase.
     listaFutbolistas = None
 
@@ -7,7 +10,7 @@ class Futbolista:
         self._golesMarcados = golesMarcados
         self._tarjetasRojas = tarjetasRojas
         self._piernaHabil = piernaHabil
-        #Init de los padres
+        Persona.__init__()
 
     def setGolesMarcados(self, golesMarcados):
         self._golesMarcados = golesMarcados
@@ -26,3 +29,6 @@ class Futbolista:
 
     def getPiernaHabil(self):
         return self._piernaHabil
+
+    def __str__(self):
+        return "Mi nombre es " + super().getNombre() + " soy profesional en el deporte " + super().getDeporte() + "Tengo " + super().getEdad() + " años de edad y llevo " + super().getAñosPracticando + "años en el deporte"
