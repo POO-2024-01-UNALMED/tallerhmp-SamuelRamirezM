@@ -11,6 +11,7 @@ class Futbolista(Persona, Deportista):
         self._piernaHabil = piernaHabil
         Persona.__init__(self, nombre, edad, altura, sexo)
         Deportista.__init__(self, "Futbol", añosPracticando)
+        Futbolista.listaFutbolistas.append(self)
 
     def setGolesMarcados(self, golesMarcados):
         self._golesMarcados = golesMarcados
