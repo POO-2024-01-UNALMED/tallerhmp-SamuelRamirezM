@@ -13,6 +13,7 @@ class Futbolista(Persona, Deportista):
         Deportista.__init__(self, "Futbol", añosPracticando)
         Futbolista.listaFutbolistas.append(self)
 
+    # Setters y getters
     def setGolesMarcados(self, golesMarcados):
         self._golesMarcados = golesMarcados
 
@@ -39,5 +40,6 @@ class Futbolista(Persona, Deportista):
     def getListaFutbolistas(cls):
         return cls.listaFutbolistas
 
+    #Metodo __str()__
     def __str__(self):
         return "Mi nombre es " + super().getNombre() + " soy profesional en el deporte " + super().getDeporte() + "Tengo " + super().getEdad() + " años de edad y llevo " + super().getAñosPracticando + "años en el deporte"

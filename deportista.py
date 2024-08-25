@@ -4,6 +4,7 @@ class Deportista:
         self._deporte = deporte
         self._añosPracticando = añosPracticando
 
+    # Setters y getters
     def setDeporte(self, deporte):
         self._deporte = deporte
 
